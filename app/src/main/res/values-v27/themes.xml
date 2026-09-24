@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.SimpleKeyboard.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

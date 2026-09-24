@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="screen_background">#1D1515</color>
+    <color name="text_primary">#FFF1F1</color>
+    <color name="text_secondary">#D5BABA</color>
+    <color name="primary">#B96C6C</color>
+    <color name="primary_dark">#892929</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="keyboard_surface">#241919</color>
+    <color name="keyboard_key">#332323</color>
+    <color name="keyboard_action">#5F2A2A</color>
+    <color name="keyboard_border">#754444</color>
+    <color name="keyboard_text">#FFF1F1</color>
+    <color name="keyboard_text_secondary">#D5BABA</color>
+    <color name="keyboard_action_text">#FFDADA</color>
+    <color name="status_surface">#352020</color>
+    <color name="status_success">#91D2AD</color>
+    <color name="status_warning">#F1C27D</color>
+</resources>

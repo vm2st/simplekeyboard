@@ -1,4 +1,30 @@
 <resources>
-    <string name="app_name">Simple Keyboard</string>
+    <string name="app_name">Простая клавиатура</string>
     <string name="keyboard_name">Простая клавиатура</string>
+    <string name="app_subtitle">Минималистичная клавиатура с быстрым переключением языка: RU / EN</string>
+    <string name="activate_keyboard">1. Включить клавиатуру</string>
+    <string name="show_keyboard">Показать список клавиатур</string>
+    <string name="open_input_settings">Открыть настройки ввода</string>
+    <string name="how_to_use_title">Как начать</string>
+    <string name="how_to_use_body">1. Включите клавиатуру в системных настройках.
+2. Откройте любое поле ввода.
+3. Выберите «Простая клавиатура» в списке способов ввода.</string>
+    <string name="theme_title">Тема приложения</string>
+    <string name="theme_accent">Бордовая</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="theme_selected">Выбрана тема: %1$s</string>
+    <string name="privacy_note">Клавиатура не отправляет введённый текст в интернет и не отслеживает буфер обмена в фоне.</string>
+    <string name="keyboard_enabled">Клавиатура включена в системе</string>
+    <string name="keyboard_not_enabled">Клавиатура пока не включена</string>
+    <string name="clipboard_ready">Буфер обмена не читается автоматически</string>
+    <string name="clipboard_empty">Буфер обмена пуст</string>
+    <string name="clipboard_not_text">В буфере нет текста</string>
+    <string name="paste">Вставить</string>
+    <string name="pasted">Текст вставлен</string>
+    <string name="pasted_truncated">Вставлено первые 100 000 символов</string>
+    <string name="switch_language">Переключить язык клавиатуры</string>
+    <string name="delete">Удалить символ</string>
+    <string name="enter">Ввод</string>
+    <string name="space">Пробел</string>
 </resources>

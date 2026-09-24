@@ -1,122 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:id="@+id/root_scroll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#FAFAFA">
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#FFFFFF"
-        android:elevation="2dp">
+        android:paddingStart="20dp"
+        android:paddingTop="28dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="28dp">
 
-        <!-- Заголовок с тенью для читаемости -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Простая клавиатура"
-            android:textColor="#000000"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="24dp"
-            android:shadowColor="#33000000"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="2" />
-
-        <!-- Остальные элементы остаются с явными цветами -->
-        <TextView
-            android:id="@+id/instructions_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            android:lineSpacingExtra="4dp"
-            android:layout_marginBottom="24dp" />
-
-        <!-- Основная кнопка -->
-        <Button
-            android:id="@+id/activate_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1. Активировать клавиатуру"
-            android:textSize="16sp"
-            android:padding="16dp"
-            android:layout_marginBottom="24dp"
-            android:backgroundTint="#2196F3"
-            android:textColor="#FFFFFF" />
-
-        <!-- Разделитель -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E0E0E0"
-            android:layout_marginBottom="16dp" />
-
-        <!-- Инструкция по переключению -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2. Как переключиться:"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            android:ellipsize="none"
+            android:includeFontPadding="true"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/app_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/keyboard_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. Откройте любое поле ввода\n2. Нажмите значок клавиатуры в строке состояния\n3. Выберите 'Простая клавиатура'"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/status_background"
+            android:padding="14dp"
             android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/activate_button"
+            style="@style/Widget.SimpleKeyboard.PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/activate_keyboard" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/show_keyboard_button"
+            style="@style/Widget.SimpleKeyboard.SecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/show_keyboard" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/how_to_use_title"
+            android:textColor="@color/text_primary"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:lineSpacingExtra="6dp"
-            android:layout_marginBottom="16dp"
-            android:paddingStart="8dp" />
-
-        <!-- Дополнительная секция -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Дополнительные настройки:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="12dp" />
+            android:text="@string/how_to_use_body"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Если нужно установить клавиатуру по умолчанию или изменить другие параметры:"
-            android:textSize="14sp"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginTop="28dp"
+            android:text="@string/theme_title"
+            android:textColor="@color/text_primary"
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
-        <Button
+        <TextView
+            android:id="@+id/theme_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/theme_accent_button"
+                style="@style/Widget.SimpleKeyboard.ThemeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/theme_accent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/theme_light_button"
+                style="@style/Widget.SimpleKeyboard.ThemeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/theme_light" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/theme_dark_button"
+                style="@style/Widget.SimpleKeyboard.ThemeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/theme_dark" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/open_settings_button"
+            style="@style/Widget.SimpleKeyboard.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Открыть настройки ввода"
-            android:textSize="14sp"
-            android:padding="12dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
-            android:backgroundTint="#4CAF50"
-            android:textColor="#FFFFFF" />
+            android:layout_marginTop="20dp"
+            android:text="@string/open_input_settings" />
 
-        <!-- Подсказка внизу -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="После активации клавиатура появится в списке способов ввода."
-            android:textSize="14sp"
-            android:textColor="#666666"
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:lineSpacingExtra="4dp"
-            android:layout_marginTop="16dp"
-            android:padding="8dp"
-            android:background="#F5F5F5" />
+            android:text="@string/privacy_note"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
 
     </LinearLayout>
 </ScrollView>
